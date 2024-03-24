@@ -24,3 +24,10 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
+
+
+Route::prefix('/auth')->group(function(){
+
+    Route::view('/category', 'auth.category')->name('auth.category');
+
+})->middleware(['auth']);
