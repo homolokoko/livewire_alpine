@@ -9,11 +9,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
                     <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <x-nav-link :href="route('auth.category')" :active="request()->routeIs('auth.category')" wire:navigate>
+                        {{-- <x-nav-link :href="route('auth.category')" :active="request()->routeIs('auth.category')" wire:navigate>
                             {{ __('Category') }}
-                        </x-nav-link>
+                        </x-nav-link> --}}
+                        <div class="flex gap-3">
+                            {{-- <x-setup.flatpickr></x-setup.flatpickr> --}}
+                            {{-- <x-setup.slim-select></x-setup.slim-select> --}}
+                            {{-- <x-setup.fuse></x-setup.fuse> --}}
+                            {{-- <x-setup.checkbox></x-setup.checkbox> --}}
+                            {{-- <x-text-input type="checkbox"></x-text-input> --}}
+                            {{-- <x-setup.modal></x-setup.modal> --}}
+                            {{-- <x-setup.radio-group></x-setup.radio-group> --}}
+                            <x-setup.toast></x-setup.toast>
+                        </div>
+
                     </div>
                 </div>
             </div>
