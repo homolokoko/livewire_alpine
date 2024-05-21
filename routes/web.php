@@ -29,5 +29,6 @@ require __DIR__.'/auth.php';
 Route::prefix('/auth')->group(function(){
 
     Route::view('/category', 'auth.category')->name('auth.category');
+    Route::view('/citizen', 'auth.citizen.index')->name('auth.citizen.index');
 
-})->middleware(['auth']);
+})->middleware(['auth', 'verified']);

@@ -10,7 +10,7 @@ export default defineConfig({
                 'resources/css/flatpickr.css',
                 'resources/css/setup/slimselect.css',
             ],
-            refresh: true,
+            refresh: false,
         }),
     ],
 });

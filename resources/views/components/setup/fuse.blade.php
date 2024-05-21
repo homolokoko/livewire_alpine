@@ -1,4 +1,5 @@
-<div wire:ignore>
+@vite(['resources/css/flatpickr.css'])
+<div>
     <div x-data="{
         open: false,
         fuse: null,

@@ -1,23 +1,23 @@
 {{-- @props(['data','multiple','allowDeselect','placeholder']) --}}
-<div wire:ignore>
+@props(['multiple', 'data', 'selected', 'placeholder'])
+<div>
     <div class="" x-data="{
-        data: [
-            {value:1,text: 'text 1'},
-            {value:2,text: 'text 2'},
-            {value:3,text: 'text 3'}
-        ],
-        muliple: false,
-        init(){
+        multiple: {{ $multiple }},
+        selected: @entangle($selected),
+        data: @entangle($data),
+        async init(){
+            await this.data;
+            $watch('selected',selected => console.log({selected: selected}));
             new SlimSelect({
                 select: $refs.slimslect,
                 settings: {
-                    placeholderText: 'Search item',
+                    placeholderText: {{ $placeholder }},
                     allowDeselect: true
                 }
-            })
+            });
         },
     }">
-        <select x-ref="slimslect" multiple>
+        <select x-ref="slimslect" x-bind:multiple="multiple" x-model="selected">
             <option data-placeholder="true"></option>
             <template x-for="(item, index) in data">
                 <option x-bind:value="item.value" x-text="item.text"></option>
@@ -26,5 +26,7 @@
         </select>
 
     </div>
+    @vite(['resources/css/setup/slimselect.css'])
+
 </div>
 
