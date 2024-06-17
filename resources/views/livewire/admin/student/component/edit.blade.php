@@ -9,7 +9,12 @@
             </button>
         </x-slot>
         <x-slot name="title">
-            <span>{{$name}}</span>
+            {{-- <span>{{$name}}</span> --}}
+            <div>
+                @if ($profile)
+                    <img src="{{ $profile->temporaryUrl() }}">
+                @endif
+            </div>
         </x-slot>
             <x-slot name="content">
                 <div x-data="{
@@ -32,16 +37,18 @@
                             <x-slot name="model"> dob </x-slot>
                         </x-input-label>
 
-                        <x-setup.radio-group>
+                        {{-- <x-setup.radio-group>
                             <x-slot name="label">{{__('Gender')}}</x-slot>
                             <x-slot name="model">gender</x-slot>
                             <x-slot name="list">genders</x-slot>
-                        </x-setup.radio-group>
+                        </x-setup.radio-group> --}}
                         
                         {{-- <x-file-upload>
-                            <x-slot name="model">images</x-slot>
+                            <x-slot name="model">profile</x-slot>
                             <x-slot name="multiple">false</x-slot>
                         </x-file-upload> --}}
+
+                        
                         
                         <x-setup.dropzone>
                             <x-slot name="relatedId"> relatedId </x-slot>
