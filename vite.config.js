@@ -7,8 +7,11 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+
                 'resources/css/flatpickr.css',
-                'resources/css/setup/slimselect.css',
+
+                'resources/js/dropzone/dropzone.js',
+                'resources/css/dropzone/dropzone.css',
             ],
             refresh: false,
         }),
