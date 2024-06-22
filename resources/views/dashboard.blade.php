@@ -19,9 +19,9 @@
 
 
                     </div>
-                    <div class="flex p-5 justify-center">
+                    <div class="flex justify-center p-5">
 
-                        <div class="grid grid-cols-8 gap-5  text-center">
+                        <div class="grid grid-cols-8 gap-5 text-center">
                             <x-content-link>
                                 <x-slot name="title">{{__('Student')}}</x-slot>
                                 <x-slot name="route">{{ route('admin.student.base-view') }}</x-slot>
@@ -35,8 +35,8 @@
                             </x-content-link>
 
                             <x-content-link>
-                                <x-slot name="title">{{__('Class')}}</x-slot>
-                                <x-slot name="route">{{ route('review.student.base-view') }}</x-slot>
+                                <x-slot name="title">{{__('Room')}}</x-slot>
+                                <x-slot name="route">{{ route('admin.room.base-view') }}</x-slot>
                                 <x-slot name="svg">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
@@ -57,8 +57,8 @@
                                     d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64" />
                             </svg></span><span>Review</span>
                     </div>
-                    <div class="flex p-5 justify-center">
-                        <div class="grid grid-cols-8 gap-5  text-center">
+                    <div class="flex justify-center p-5">
+                        <div class="grid grid-cols-8 gap-5 text-center">
 
                             <x-content-link>
                                 <x-slot name="title">{{__('Student')}}</x-slot>

@@ -12,6 +12,9 @@ export default defineConfig({
 
                 'resources/js/dropzone/dropzone.js',
                 'resources/css/dropzone/dropzone.css',
+
+                'resources/js/toastify/app.js',
+                'resources/css/toastify/app.css',
             ],
             refresh: false,
         }),

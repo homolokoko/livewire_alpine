@@ -46,6 +46,8 @@ Route::middleware([
     Route::prefix('/admin')->group(function () {
 
         Route::view('/student', 'admin.student.base-view')->name('admin.student.base-view');
+
+        Route::view('/room', 'admin.room.base-view')->name('admin.room.base-view');
     });
 
     Route::prefix('/review')->group(function () {
